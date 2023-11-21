@@ -41,6 +41,9 @@ export default function LoginScreen() {
 
   return (
     <KeyboardAvoidingView style={styles.container} behavior="padding">
+      <View style={styles.logoContainer}>
+        <Image source={require('C:\Users\edanu\OneDrive\Belgeler\GitHub\PhoneTurkProject\FrontEndApp\my-app-prebuild\screens\logo-phoneturk.jpg')} style={styles.logo} />
+      </View>
       <View style={styles.inputContainer}>
         <TextInput
           style={styles.input}
@@ -56,6 +59,7 @@ export default function LoginScreen() {
           onChangeText={(text) => setPassword(text)}
         />
       </View>
+
       <View style={styles.buttonContainer}>
         <TouchableOpacity style={styles.button} onPress={handleLogin}>
           <Text style={styles.buttonText}>Giriş Yap</Text>
@@ -89,7 +93,7 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
      width: '60%',
-     marginTop: 40,
+     marginTop: 80,
   },
   button: {
      backgroundColor: '#0782F9',
@@ -101,23 +105,27 @@ const styles = StyleSheet.create({
        width: 0,
        height: 2,
      },
-     shadowOpacity: 0.25,
+     shadowOpacity: 1,
      shadowRadius: 3.84,
-     elevation: 5,
+     elevation: 50,
   },
   buttonText: {
-     color: 'white',
+     color: 'black',
      fontWeight: 'bold',
   },
   outlinebutton: {
      backgroundColor: 'white',
-     marginTop: 5,
+     marginTop: 30,
      borderWidth: 1,
      borderColor: '#0782F9',
      borderRadius: 10,
   },
   outlineButtonText: {
-     color: '#0782F9',
+     color: 'black',
      fontWeight: 'bold',
   },
+  logo: {
+    width: 100,
+    height: 100,
+ },
  })
